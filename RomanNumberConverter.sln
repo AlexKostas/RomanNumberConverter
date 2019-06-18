@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumberConverter", "RomanNumberConverter\RomanNumberConverter.csproj", "{063675A2-2118-4CE0-AD0D-2A7B88C5A536}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumberConverter.UnitTests", "RomanNumberConverter.UnitTests\RomanNumberConverter.UnitTests.csproj", "{C8AECC60-CD3E-4E95-9920-13648B3C1FA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{063675A2-2118-4CE0-AD0D-2A7B88C5A536}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{063675A2-2118-4CE0-AD0D-2A7B88C5A536}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{063675A2-2118-4CE0-AD0D-2A7B88C5A536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8AECC60-CD3E-4E95-9920-13648B3C1FA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8AECC60-CD3E-4E95-9920-13648B3C1FA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8AECC60-CD3E-4E95-9920-13648B3C1FA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8AECC60-CD3E-4E95-9920-13648B3C1FA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
