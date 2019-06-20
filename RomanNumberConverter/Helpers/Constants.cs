@@ -1,4 +1,4 @@
-namespace RomanNumberConverter {
+namespace RomanNumberConverter.Helpers {
     public static class Constants {
         public const string WelcomeMessage = "Welcome to Roman Number Converter!";
         public const string Directions = "Type an integer which is greater than zero to " +

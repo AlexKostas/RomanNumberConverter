@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace RomanNumberConverter {
+namespace RomanNumberConverter.Helpers {
     public static class RomanNumberFormatter {
         public static string FormatRomanNumber(string romanNumber) {
             if (string.IsNullOrWhiteSpace(romanNumber))
