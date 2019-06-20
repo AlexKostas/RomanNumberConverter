@@ -3,12 +3,12 @@
 namespace RomanNumberConverter {
     internal static class Program {
         public static void Main() {
-            Console.WriteLine("Welcome to Roman Number converter!");
+            Console.WriteLine(Constants.WelcomeMessage);
             while (true) {
                 string input = GetInputFromConsole();
                 
-                if (input.Equals("")) continue;
-                if (input.Equals("quit")) break;
+                if (input.Equals(string.Empty)) continue;
+                if (input.Equals(Constants.QuitOption)) break;
 
                 try {
                     int inputedInt = int.Parse(input);
@@ -31,8 +31,7 @@ namespace RomanNumberConverter {
         }
 
         static string GetInputFromConsole() {
-            Console.WriteLine("Type an integer which is greater than zero to convert it " +
-                    "to roman or a valid roman number to convert it to integer. Type quit to exit");
+            Console.WriteLine(Constants.Directions);
             string input = Console.ReadLine() ?? string.Empty;
             return input.ToLower().Trim();
         }
@@ -40,14 +39,14 @@ namespace RomanNumberConverter {
         static void RomanFromInt(int num) {
             try {
                 string romanNum = RomanNumberConverter.IntegerToRoman(num);
-                Console.WriteLine("Roman number for {0} is: {1}", num, romanNum);
+                Console.WriteLine(Constants.RomanFromIntResultMessage, num, romanNum);
             }
             catch (ArgumentOutOfRangeException) {
-                Console.WriteLine("Please enter a value greater than or equal to zero");
+                Console.WriteLine(Constants.ArgumentOutOfRangeError);
                 throw;
             }
             catch (Exception) {
-                Console.WriteLine("Something went wrong");
+                Console.WriteLine(Constants.UnknownErrorMessage);
                 throw;
             }
         }
@@ -56,10 +55,10 @@ namespace RomanNumberConverter {
             string formattedRoman = GetFormattedRoman(inputtedRoman);
             try {
                 int result = RomanNumberConverter.RomanToInteger(formattedRoman);
-                Console.WriteLine("Integer number for {0} is: {1}", formattedRoman, result);
+                Console.WriteLine(Constants.IntFromRomanMessage, formattedRoman, result);
             }
             catch (Exception) {
-                Console.WriteLine("Something went wrong");
+                Console.WriteLine(Constants.UnknownErrorMessage);
                 throw;
             }
         }
@@ -69,11 +68,11 @@ namespace RomanNumberConverter {
                 return RomanNumberFormatter.FormatRomanNumber(inputtedRoman);
             }
             catch (ArgumentNullException) {
-                Console.WriteLine("Can't convert an empty number");
+                Console.WriteLine(Constants.EmptyNumberError);
                 throw;
             }
             catch (InvalidOperationException) {
-                Console.WriteLine("This is not a roman number");
+                Console.WriteLine(Constants.InvalidNumberError);
                 throw;
             }
         }
