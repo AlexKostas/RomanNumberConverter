@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using RomanNumberConverter.Helpers;
 
 namespace RomanNumberConverter.UnitTests {
     [TestFixture]

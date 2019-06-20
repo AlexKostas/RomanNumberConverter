@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
 
-namespace RomanNumberConverter {
-    public static class RomanNumberConverter {
+namespace RomanNumberConverter.Helpers {
+    public static class RomanConverter {
         public static int RomanToInteger(string romanNumber) {
             if (string.IsNullOrWhiteSpace(romanNumber))
                 throw new ArgumentException();

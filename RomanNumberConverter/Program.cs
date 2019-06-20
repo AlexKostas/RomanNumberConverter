@@ -1,4 +1,5 @@
 ﻿using System;
+using RomanNumberConverter.Helpers;
 
 namespace RomanNumberConverter {
     internal static class Program {
@@ -38,7 +39,7 @@ namespace RomanNumberConverter {
         
         static void RomanFromInt(int num) {
             try {
-                string romanNum = RomanNumberConverter.IntegerToRoman(num);
+                string romanNum = RomanConverter.IntegerToRoman(num);
                 Console.WriteLine(Constants.RomanFromIntResultMessage, num, romanNum);
             }
             catch (ArgumentOutOfRangeException) {
@@ -54,7 +55,7 @@ namespace RomanNumberConverter {
         static void IntFromRoman(string inputtedRoman) {
             string formattedRoman = GetFormattedRoman(inputtedRoman);
             try {
-                int result = RomanNumberConverter.RomanToInteger(formattedRoman);
+                int result = RomanConverter.RomanToInteger(formattedRoman);
                 Console.WriteLine(Constants.IntFromRomanMessage, formattedRoman, result);
             }
             catch (Exception) {
